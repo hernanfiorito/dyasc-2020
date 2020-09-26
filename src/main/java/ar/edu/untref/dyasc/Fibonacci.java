@@ -5,6 +5,7 @@ public class Fibonacci {
 	public static void calcularKNumerosDeSerie(int k){
 		int resultadoActual = 1;
 		int resultadoAnterior = 0;
+		System.out.print("fibo<" + k + ">: ");
 		for(int i = 0; i < k; i++) {
 			if(i <= 1) {
 				System.out.print(resultadoAnterior + i + " ");
