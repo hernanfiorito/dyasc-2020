@@ -1,4 +1,3 @@
 language: java
-script:
-cd ./fibo2 
+script: cd ./fibo2 
 mvn package
