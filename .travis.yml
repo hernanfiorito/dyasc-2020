@@ -1,2 +1,2 @@
 language: java
-script: cd ./fibo2 && mvn package
+script: cd ./fibo3 && mvn package
