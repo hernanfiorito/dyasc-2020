@@ -21,7 +21,7 @@ public class MainFibo2 {
 			int indiceCantidad = 3;
 			if(args[indiceOpción].startsWith("-o")){
 				if((!args[indiceOpción].equals("-o=vi") && !args[indiceOpción].equals("-o=vd") && !args[indiceOpción].equals("-o=hi") && !args[indiceOpción].equals("-o=hd"))){
-					System.out.print("Opciones no válidas.");
+					System.out.println("Opciones no válidas.");
 					System.exit(1);
 				}
 				horizontal = args[0].substring(3, 4).equals("h");
@@ -37,8 +37,13 @@ public class MainFibo2 {
 				indiceModo--;
 				indiceCantidad--;
 			}
-			if(args[indiceModo].equals("-m=s") || args[indiceModo].equals("-m=s")) {
-				sumatoria = true;
+			if(args[indiceModo].startsWith("-m=") || args[indiceModo].startsWith("-m=")) {
+				if(args[indiceModo].charAt(3) == 's') {
+					sumatoria = true;
+				}else if(!(args[indiceModo].charAt(3) == 'l')) {
+					System.out.println("Opciones no válidas.");
+					System.exit(1);
+				}
 			}else {
 				indiceCantidad--;
 			}
